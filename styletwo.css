@@ -17,7 +17,7 @@ body{
 h1{
     color: #82fdff;
     font-family: Romantic;
-    padding-bottom: 15px;
+    padding-bottom: 0px;
     padding-left: 40px;
     padding-right: 30px;
     font-size: 120px;
@@ -26,22 +26,29 @@ h1{
 h2{
     color: rgb(255, 107, 14);
     font-family: Romantic;
-    padding-bottom: -25px;
+    padding-bottom: 0px;
+    padding-left: 40px;
+    padding-right: 30px;
+    font-size: 100px;
+    text-align: left;
+   }
+
+h3{
+    color: #de118b;
+    font-family: Romantic;
+    padding-bottom: 0px;
     padding-left: 40px;
     padding-right: 30px;
     font-size: 120px;
     text-align: center;
    }
 
-h3{
-    color: #de118b;
-    font-family: Romantic;
-    padding-bottom: 15px;
-    padding-left: 40px;
-    padding-right: 30px;
-    font-size: 120px;
-    text-align: center;
-   }
+h4 {
+    font-family: Young;
+    color:#142544;
+    font-size: 20px; 
+    text-align: left;
+}
    
 p{
     font-family: Young;
@@ -93,7 +100,26 @@ p{
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
-img {vertical-align: middle;}
+img {vertical-align: top;}
+
+
+/* GRID */
+.item1 { grid-area: pro1; }
+.item2 { grid-area: pro2; }
+.item3 { grid-area: pro3; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'pro1 pro2'
+    'pro3 0';
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-container > div {
+  text-align: left;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -163,7 +189,9 @@ img {vertical-align: middle;}
   height: 90px;
   width: 90px;
   padding-top: 22px;
-  margin: 0 8px;
+  padding-left: 22px;
+  margin-left: 35px;
+  margin-bottom: 30px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
